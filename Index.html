@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementing Custom Fonts on Websites</title>
+    <style>
+        @font-face {
+            font-family: 'CustomWebFont';
+            src: url('Kablammo-Regular.woff2') format('woff2'),
+                 url('Kablammo-Regular.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'CustomWebFont', sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>How Browsers Handle Custom Fonts</h1>
+    <p>Custom fonts can be integrated into web pages using the <code>@font-face</code> CSS rule. This approach enables developers to load fonts from their own servers, ensuring a unique design experience across different devices.</p>
+    <p>To use <code>@font-face</code>, follow these steps:</p>
+    <ol>
+        <li>Select or create a font and convert it to web-friendly formats (WOFF, WOFF2).</li>
+        <li>Upload the font files to your hosting server.</li>
+        <li>Define the <code>@font-face</code> CSS rule, specifying the font files' locations.</li>
+        <li>Use the <code>font-family</code> property in your styles to apply the custom font.</li>
+    </ol>
+    <p>This page showcases a font called "Kablammo," integrated using the <code>@font-face</code> technique.</p>
+    
+    <footer>
+        <p>Page last modified on: <span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>
